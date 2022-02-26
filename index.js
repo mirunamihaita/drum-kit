@@ -10,7 +10,6 @@
 //     alert('click')
 // });
 
-let numberOfDrumButtons = document.querySelectorAll(".drum").length;
 
 // console.log(numberOfDrumButtons)
 // const array = [9, 100, 4]
@@ -18,8 +17,23 @@ let numberOfDrumButtons = document.querySelectorAll(".drum").length;
 // console.log(array[1])
 
 
+let numberOfDrumButtons = document.querySelectorAll(".drum").length;
+
 for (let i = 0; i < numberOfDrumButtons; i++) {
   document.querySelectorAll(".drum")[i].addEventListener("click", function () {
-    alert("click");
+   
+    this.style.color = "white"
+
+
+    let audio = new Audio('sounds/tom-1.mp3');
+    audio.play();    
+    
+    
+    // SWITCH
+
+
   });
 }
+
+
+
